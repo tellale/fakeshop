@@ -1,18 +1,16 @@
 <template>
-  <div class="products-list">
-    <h1>This is a product list page</h1>
-  </div>
+  <ProductCard/>
 </template>
 
 <script lang="ts">
-import fakeShopApi from "@/api/fakeShopAPI";
-import { defineComponent } from "@vue/runtime-core";
-
+import { defineComponent } from 'vue'
+import ProductCard from '@/components/ProductCard.vue'
 
 export default defineComponent({
-  setup() {
-    fakeShopApi.get('/products').then()
+  components:{
+    ProductCard
   }
 })
-
 </script>
+
+
