@@ -11,8 +11,6 @@
         <p>${{ product.price }}</p>
         <button @click="viewDetails(product.id)">View Details</button>
       </div>
-
-
     </div>
 </template>
 
@@ -39,10 +37,7 @@ export default defineComponent({
     },
     viewDetails(id: number) {
       this.$router.push({
-        name: 'details',
-        params: {
-          id
-        }
+        path: `/details${id}`
       })
     }
   },
